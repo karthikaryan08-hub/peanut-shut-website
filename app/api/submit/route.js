@@ -3,7 +3,7 @@ export async function POST(request) {
     const body = await request.json();
 
     const formattedData = {
-      name: body.fullName,
+      name: body.fullName || body.name,
       email: body.email,
       phone: body.phone,
       enquiry: body.enquiry,
